@@ -13,6 +13,8 @@ variable "location" {
   description = "The location where the resources will be deployed."
 }
 
+## CosmosDB Account
+
 variable "offer_type" {
   type        = string
   description = <<EOF
@@ -49,6 +51,20 @@ variable "geo_location" {
     zone_redundant    = optional(bool)
   })
   description = "The geo location for the CosmosDB account."
+}
+
+## CosmosDB SQL Database
+variable "sql_database" {
+  description = "The SQL database used with the CosmosDB account."
+  type = object({
+    throughput = optional(number)
+    autoscale_settings = optional(object({
+      max_throughput = number
+    }))
+  })
+  default = {
+    throughput = 400
+  }
 }
 
 variable "tags" {

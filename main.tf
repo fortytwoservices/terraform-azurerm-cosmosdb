@@ -32,3 +32,17 @@ resource "azurerm_cosmosdb_account" "main" {
     module_version = "0.1.0"
   })
 }
+
+resource "azurerm_cosmosdb_sql_database" "main" {
+  name                = format("cosno-%s", var.name)
+  resource_group_name = var.resource_group_name
+  account_name        = azurerm_cosmosdb_account.main.name
+  throughput          = var.sql_database.throughput
+
+  dynamic "autoscale_settings" {
+    for_each = var.sql_database.autoscale_settings != null ? ["enable"] : []
+    content {
+      max_throughput = var.sql_database.autoscale_settings.max_throughput
+    }
+  }
+}
