@@ -39,6 +39,16 @@ module "cosmosdb" {
     failover_priority = 0
     location          = "northeurope"
   }
+
+  sql_database = {
+    throughput = 400
+
+    # Optional, if you want to enable autoscale.
+    # If set, you can't define the `throughput` attribute.
+    # autoscale_settings = {
+    #   max_throughput = 1000
+    # }
+  }
 }
 ```
 
@@ -63,6 +73,7 @@ No modules.
 | <a name="input_name"></a> [name](#input\_name) | The name used for deploying resources. | `string` | n/a | yes |
 | <a name="input_offer_type"></a> [offer\_type](#input\_offer\_type) | (Optional) The offer type for the CosmosDB database. Defaults to 'Standard'.<br><br>  Currently, this can only be set to 'Standard'. | `string` | `"Standard"` | no |
 | <a name="input_resource_group_name"></a> [resource\_group\_name](#input\_resource\_group\_name) | Resource group where the resources will be deployed. | `string` | n/a | yes |
+| <a name="input_sql_database"></a> [sql\_database](#input\_sql\_database) | The SQL database used with the CosmosDB account. | <pre>object({<br>    throughput = optional(number)<br>    autoscale_settings = optional(object({<br>      max_throughput = number<br>    }))<br>  })</pre> | <pre>{<br>  "throughput": 400<br>}</pre> | no |
 | <a name="input_tags"></a> [tags](#input\_tags) | (Optional) A mapping of tags to assign to the resource.<br><br>  Any resources created with this module will also have these tags:<br>  - source: terraform<br>  - module: amestofortytwo/cosmosdb/azurerm<br>  - module\_version: `<version>` | `map(string)` | `{}` | no |
 
 ## Outputs
@@ -74,4 +85,5 @@ No outputs.
 | Name | Type |
 |------|------|
 | [azurerm_cosmosdb_account.main](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/cosmosdb_account) | resource |
+| [azurerm_cosmosdb_sql_database.main](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/cosmosdb_sql_database) | resource |
 <!-- END_TF_DOCS -->
