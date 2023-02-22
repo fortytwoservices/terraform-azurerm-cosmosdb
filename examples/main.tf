@@ -21,4 +21,14 @@ module "cosmosdb" {
     failover_priority = 0
     location          = "northeurope"
   }
+
+  sql_database = {
+    throughput = 400
+
+    # Optional, if you want to enable autoscale.
+    # If set, you can't define the `throughput` attribute.
+    # autoscale_settings = {
+    #   max_throughput = 1000
+    # }
+  }
 }
