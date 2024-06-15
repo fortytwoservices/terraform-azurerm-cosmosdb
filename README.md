@@ -137,10 +137,7 @@ Default:
 
 Description:   (Optional) A mapping of tags to assign to the resource.
 
-  Any resources created with this module will also have these tags:
-  - source: terraform
-  - module: amestofortytwo/cosmosdb/azurerm
-  - module\_version: `<version>`
+  Any resources created with this module will also have these tags: 'source: terraform', 'module: amestofortytwo/cosmosdb/azurerm', 'module\_version: `<version>`'.
 
 Type: `map(string)`
 
