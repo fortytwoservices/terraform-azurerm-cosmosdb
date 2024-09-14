@@ -28,7 +28,7 @@ resource "azurerm_cosmosdb_account" "main" {
 
   tags = merge(var.tags, {
     source         = "terraform"
-    module         = "amestofortytwo/cosmosdb/azurerm"
+    module         = "fortytwoservices/cosmosdb/azurerm"
     module_version = "0.1.0"
   })
 }
