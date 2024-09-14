@@ -4,7 +4,7 @@ resource "azurerm_resource_group" "dev" {
 }
 
 module "cosmosdb" {
-  source  = "amestofortytwo/cosmosdb/azurerm"
+  source  = "fortytwoservices/cosmosdb/azurerm"
   version = "0.1.0"
 
   name                = "demo-dev"

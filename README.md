@@ -6,7 +6,7 @@
 
 The following requirements are needed by this module:
 
-- azurerm (>= 3.44.1)
+- <a name="requirement_azurerm"></a> [azurerm](#requirement\_azurerm) (>= 3.44.1)
 
 ## Examples
 
@@ -26,7 +26,7 @@ The following requirements are needed by this module:
 
 The following providers are used by this module:
 
-- azurerm (>= 3.44.1)
+- <a name="provider_azurerm"></a> [azurerm](#provider\_azurerm) (>= 3.44.1)
 
 ## Resources
 
@@ -40,7 +40,7 @@ The following resources are used by this module:
 
 The following input variables are required:
 
-### consistency\_policy
+### <a name="input_consistency_policy"></a> [consistency\_policy](#input\_consistency\_policy)
 
 Description: The consistency policy for the CosmosDB account.
 
@@ -54,7 +54,7 @@ object({
   })
 ```
 
-### geo\_location
+### <a name="input_geo_location"></a> [geo\_location](#input\_geo\_location)
 
 Description: The geo location for the CosmosDB account.
 
@@ -68,19 +68,19 @@ object({
   })
 ```
 
-### location
+### <a name="input_location"></a> [location](#input\_location)
 
 Description: The location where the resources will be deployed.
 
 Type: `string`
 
-### name
+### <a name="input_name"></a> [name](#input\_name)
 
 Description: The name used for deploying resources.
 
 Type: `string`
 
-### resource\_group\_name
+### <a name="input_resource_group_name"></a> [resource\_group\_name](#input\_resource\_group\_name)
 
 Description: Resource group where the resources will be deployed.
 
@@ -90,7 +90,7 @@ Type: `string`
 
 The following input variables are optional (have default values):
 
-### kind
+### <a name="input_kind"></a> [kind](#input\_kind)
 
 Description:   (Optional) The type of account to create. Defaults to 'GlobalDocumentDB'.  
 
@@ -100,7 +100,7 @@ Type: `string`
 
 Default: `null`
 
-### offer\_type
+### <a name="input_offer_type"></a> [offer\_type](#input\_offer\_type)
 
 Description:   (Optional) The offer type for the CosmosDB database. Defaults to 'Standard'.  
 
@@ -110,7 +110,7 @@ Type: `string`
 
 Default: `"Standard"`
 
-### sql\_database
+### <a name="input_sql_database"></a> [sql\_database](#input\_sql\_database)
 
 Description: The SQL database used with the CosmosDB account.
 
@@ -133,11 +133,11 @@ Default:
 }
 ```
 
-### tags
+### <a name="input_tags"></a> [tags](#input\_tags)
 
 Description:   (Optional) A mapping of tags to assign to the resource.
 
-  Any resources created with this module will also have these tags: 'source: terraform', 'module: amestofortytwo/cosmosdb/azurerm', 'module\_version: `<version>`'.
+  Any resources created with this module will also have these tags: 'source: terraform', 'module: fortytwoservices/cosmosdb/azurerm', 'module\_version: `<version>`'.
 
 Type: `map(string)`
 
@@ -146,7 +146,6 @@ Default: `{}`
 ## Outputs
 
 No outputs.
-
 
 ## Modules
 
