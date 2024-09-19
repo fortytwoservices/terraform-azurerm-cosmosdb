@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/b728b4a1-b4e3-4ddd-8c33-b02823c70343)# CosmosDB
+# CosmosDB
 
 | :exclamation:  NB! |
 |---|
