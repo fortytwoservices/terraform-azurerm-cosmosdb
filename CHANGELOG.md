@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.1.2](https://github.com/fortytwoservices/terraform-azurerm-cosmosdb/compare/v0.1.1...v0.1.2) (2025-12-21)
+
+
+### Bug Fixes
+
+* correct example ([d75bab7](https://github.com/fortytwoservices/terraform-azurerm-cosmosdb/commit/d75bab78d94830d6256e84baf0ee57c4d34f892e))
+* correct version ([#233](https://github.com/fortytwoservices/terraform-azurerm-cosmosdb/issues/233)) ([4fa0f8d](https://github.com/fortytwoservices/terraform-azurerm-cosmosdb/commit/4fa0f8d231fb03701c3748c7cf6bfa0325694730))
+
 ## [0.1.1](https://github.com/fortytwoservices/terraform-azurerm-cosmosdb/compare/v0.1.0...v0.1.1) (2024-09-14)
 
 
